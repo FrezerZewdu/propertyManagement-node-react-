@@ -1,0 +1,21 @@
+customers api for finance
+get('/') => gets all customers
+post('/newCustomer') => creates new customer(firstName,lastName,phoneNumber) returns id
+get('customerInfo/:id) => returns customers transaction 
+
+employee api for manager
+get('/') => gets all employees
+get('/:name') => gets employee by name optional search functionality
+post('/createEmployee') => creates new employee(firstName,lastName,email,password,departmentID) returns id
+post('/login') => recieves req.body.email and req.body.password then returns role and jwt token
+delete('/terminate/:id') => deletes employe of that particular id
+
+finished goods for finance during sales
+get('/') => gets all finished goods
+post('/newgoods') => creates new goods(productName,productCode,stockId, category, total_price, registeredBy[int]) returns id
+
+rawmaterials api for manager
+get('/') => returns all raw materials
+post('/createRaw') => creates raw materials(name,materialCode,packet,totalPacket,price,totalPrice,weight,registeredBy[int]) returns id
+put('/withdrawal') => subtracts from the raw material section(rmid, eid,amount)
+get('/withdrawalReport/:date') => takes date and returns withdrawal report
